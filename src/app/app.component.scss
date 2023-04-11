@@ -18,10 +18,67 @@ main{
     justify-content: center;
 }
 .filter{
-    width: 75%;
-    height: 85px;
+    width: 95%;
+    height: 100px;
     background-color: white;
     border-radius: 10px;
     position: absolute;
     top: 110px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+}
+.filter-clear-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 16px;
+}
+.pclear{
+    color: var(--DarkGrayishCyan);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+.ptag{
+    color: var(--Primary);
+    font-weight: 700;
+    font-size: 0.8rem;
+    position: relative;
+    top: 8px;
+}
+.ptag-close{
+    color: white;
+    font-weight: 700;
+    font-size: 0.8rem;
+    position: relative;
+    top: 8px;
+}
+.tag-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    width: 115px;
+    height: 35px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.tag{
+    background-color: var(--Background);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tag-close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Primary);
+    height: 35px;
+    width: 100%;
+    border-radius: 0px 5px 5px 0px;
+}
+.filter-tags-container{
+    display: flex;
+    flex-wrap: wrap;
 }
