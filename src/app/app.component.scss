@@ -1,6 +1,6 @@
 header{
     width: 100vw;
-    height: 100px;
+    height: 150px;
     background-color: var(--Primary);
 }
 .img-banner{
@@ -22,6 +22,6 @@ main{
     height: 85px;
     background-color: white;
     border-radius: 10px;
-    position: relative;
-    bottom: 40px;
+    position: absolute;
+    top: 110px;
 }
