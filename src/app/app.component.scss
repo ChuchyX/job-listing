@@ -9,7 +9,7 @@ header{
 }
 main{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: var(--Background);
 }
 .filter-container{
@@ -88,14 +88,16 @@ main{
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .job-container{
     width: 100%;
-    height: 180px;
+    height: 280px;
     background-color: white;
     border-radius: 10px;
     border-left: 5px solid var(--Primary);   
     padding-left: 20px;
+    margin-bottom: 20px;
 }
 .logo{
     width: 50px;
@@ -142,4 +144,38 @@ main{
 }
 .prole{
     margin-top: -15px;
+}
+.ago{
+    margin-top: -15px;
+    color: var(--DarkGrayishCyan);
+    font-weight: 700;
+}
+.hr{
+    width: 95%;
+}
+.container-jobs-tags{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    padding: 5px;
+    row-gap: 15px;
+}
+.tag2{
+    background-color: var(--Background);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+}
+
+@media (min-width: 767px) {
+    .tag-container{
+        width: 170px;
+    }
+}
+@media (min-width: 1440px) {
+    .tag-container{
+        width: 250px;
+    }
 }
