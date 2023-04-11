@@ -39,6 +39,9 @@ main{
     font-weight: 700;
     font-size: 1.3rem;
 }
+.pclear:hover{
+    cursor: pointer;
+}
 .ptag{
     color: var(--Primary);
     font-weight: 700;
@@ -77,6 +80,9 @@ main{
     height: 35px;
     width: 100%;
     border-radius: 0px 5px 5px 0px;
+}
+.tag-close:hover{
+    cursor: pointer;
 }
 .filter-tags-container{
     display: flex;
@@ -168,6 +174,9 @@ main{
     justify-content: center;
     width: 100px;
 }
+.tag2:hover{
+    cursor: pointer;
+}
 
 @media (min-width: 767px) {
     .tag-container{
@@ -177,5 +186,8 @@ main{
 @media (min-width: 1440px) {
     .tag-container{
         width: 250px;
+    }
+    .job-container{
+        height: 220px;
     }
 }
