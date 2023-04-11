@@ -2,10 +2,11 @@
 :root{
     --Background: hsl(180, 52%, 96%);
     --Primary: hsl(180, 29%, 50%);
+    --WhiteBackground: hsl(180, 31%, 95%);
 }
 body{
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-family: 'League Spartan', sans-serif;
     font-family: 'Outfit', sans-serif;
-    background-color: var(--Background);
+    background-color: white;
 }
