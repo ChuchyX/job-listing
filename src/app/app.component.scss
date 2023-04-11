@@ -1,0 +1,12 @@
+.img-banner{
+    width: 100vw;
+    height: 1px;
+    content: url('../assets/images/bg-header-mobile.svg');
+}
+
+
+  @media (min-width: 768px) {
+    .img-banner {
+      content: url('../assets/images/bg-header-desktop.svg');
+    }
+  }
