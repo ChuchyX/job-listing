@@ -3,8 +3,8 @@
 </header>
 <main>
   <div class="container main-container">
-    <div class="filter-container">
-      <div class="filter">
+    <div class="filter-container" >
+      <div class="filter" *ngIf="showFilter">
         <div class="filter-tags-container">
          
           <div class="tag-container">
@@ -42,11 +42,25 @@
               <p class="ptag-close">X</p>
             </div>
           </div>
-          
+
         </div>
         <div class="filter-clear-container">
           <p class="pclear">Clear</p>
         </div>
+      </div>
+    </div>
+
+
+    <div class="jobs-container">
+      <div class="job-container">
+        <img src="../assets/images/photosnap.svg" alt="logo" class="logo">
+        <div class="container-company">
+          <p class="name-company">JavaScript</p>
+          <div class="boton-new">NEW!</div>
+          <div class="boton-featured">FEATURED</div>
+        </div>
+        <p class="prole"><b>Junior Frontend Developer</b></p>
+        <p class="ago">1d Ago </p>
       </div>
     </div>
     
