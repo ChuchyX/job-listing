@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Job } from './models/Job';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'job-listing';
-  showFilter = true;
 
-  jobsList = [
+  jobsList: Job[] = [
     {
       id: 1,
       company: "Photosnap",
@@ -164,9 +164,13 @@ export class AppComponent {
 
   tagsFilter: string[] = [];
 
+
   addTag(tag: string)
   {
-    this.tagsFilter.push(tag);
+    if(this.tagsFilter.indexOf(tag) === -1){
+      this.tagsFilter.push(tag);
+      this.tagsFilter = [...this.tagsFilter];
+    }
   }
   deleteTag(tag: string)
   {
