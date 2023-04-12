@@ -4,47 +4,20 @@
 <main>
   <div class="container main-container">
     <div class="filter-container" >
-      <div class="filter" *ngIf="showFilter">
+      <div class="filter" *ngIf="tagsFilter.length > 0">
         <div class="filter-tags-container">
          
-          <div class="tag-container">
+          <div class="tag-container" *ngFor="let tag of tagsFilter">
             <div class="tag">
-              <p class="ptag">JavaScript</p>
+              <p class="ptag">{{tag}}</p>
             </div>
-            <div class="tag-close">
-              <p class="ptag-close">X</p>
-            </div>
-          </div>
-
-          <div class="tag-container">
-            <div class="tag">
-              <p class="ptag">JavaScript</p>
-            </div>
-            <div class="tag-close">
-              <p class="ptag-close">X</p>
-            </div>
-          </div>
-
-          <div class="tag-container">
-            <div class="tag">
-              <p class="ptag">JavaScript</p>
-            </div>
-            <div class="tag-close">
-              <p class="ptag-close">X</p>
-            </div>
-          </div>
-
-          <div class="tag-container">
-            <div class="tag">
-              <p class="ptag">JavaScript</p>
-            </div>
-            <div class="tag-close">
+            <div class="tag-close" (click)="deleteTag(tag)">
               <p class="ptag-close">X</p>
             </div>
           </div>
 
         </div>
-        <div class="filter-clear-container">
+        <div class="filter-clear-container" (click)="clear()">
           <p class="pclear">Clear</p>
         </div>
       </div>
@@ -53,92 +26,35 @@
 
     <div class="jobs-container">
 
-      <div class="job-container">
-        <img src="../assets/images/photosnap.svg" alt="logo" class="logo">
+      <div class="job-container" *ngFor="let job of jobsList">
+        <img [src]="job.logo" alt="logo" class="logo">
         <div class="container-company">
-          <p class="name-company">JavaScript</p>
-          <div class="boton-new">NEW!</div>
-          <div class="boton-featured">FEATURED</div>
+          <p class="name-company">{{job.company}}</p>
+          <div class="boton-new" *ngIf="job.new">NEW!</div>
+          <div class="boton-featured" *ngIf="job.featured">FEATURED</div>
         </div>
-        <p class="prole"><b>Junior Frontend Developer</b></p>
-        <p class="ago">1d Ago &nbsp;&nbsp;&middot;&nbsp;&nbsp; Full Time &nbsp;&nbsp;&middot;&nbsp;&nbsp; USA Only</p>
+        <p class="prole"><b>{{job.position}}</b></p>
+        <p class="ago">{{job.postedAt}} &nbsp;&nbsp;&middot;&nbsp;&nbsp; {{job.contract}} &nbsp;&nbsp;&middot;&nbsp;&nbsp; {{job.location}}</p>
         <div class="hr"><hr></div>
         <div class="container-jobs-tags">
-          <div class="tag2">
-            <p class="ptag">JavaScript</p>
+          <div class="tag2" (click)="addTag(job.role)">
+            <p class="ptag">{{job.role}}</p>
           </div>
-          <div class="tag2">
-            <p class="ptag">JavaScript</p>
+          <div class="tag2" (click)="addTag(job.level)">
+            <p class="ptag">{{job.level}}</p>
           </div>
-          <div class="tag2">
-            <p class="ptag">JavaScript</p>
+          <div class="tag2" *ngFor="let lang of job.languages" (click)="addTag(lang)">
+            <p class="ptag">{{lang}}</p>
           </div>
-          <div class="tag2">
-            <p class="ptag">JavaScript</p>
-          </div>
-          <div class="tag2">
-            <p class="ptag">JavaScript</p>
-          </div>
+          <div class="tag2" *ngFor="let tool of job.tools" (click)="addTag(tool)">
+            <p class="ptag">{{tool}}</p>
+          </div>      
         </div>
       </div>
 
-      <div class="job-container">
-        <img src="../assets/images/photosnap.svg" alt="logo" class="logo">
-        <div class="container-company">
-          <p class="name-company">JavaScript</p>
-          <div class="boton-new">NEW!</div>
-          <div class="boton-featured">FEATURED</div>
-        </div>
-        <p class="prole"><b>Junior Frontend Developer</b></p>
-        <p class="ago">1d Ago &nbsp;&nbsp;&middot;&nbsp;&nbsp; Full Time &nbsp;&nbsp;&middot;&nbsp;&nbsp; USA Only</p>
-        <div class="hr"><hr></div>
-        <div class="container-jobs-tags">
-          <div class="tag2">
-            <p class="ptag">JavaScript</p>
-          </div>
-          <div class="tag2">
-            <p class="ptag">JavaScript</p>
-          </div>
-          <div class="tag2">
-            <p class="ptag">JavaScript</p>
-          </div>
-          <div class="tag2">
-            <p class="ptag">JavaScript</p>
-          </div>
-          <div class="tag2">
-            <p class="ptag">JavaScript</p>
-          </div>
-        </div>
-      </div>
+    
 
-      <div class="job-container">
-        <img src="../assets/images/photosnap.svg" alt="logo" class="logo">
-        <div class="container-company">
-          <p class="name-company">JavaScript</p>
-          <div class="boton-new">NEW!</div>
-          <div class="boton-featured">FEATURED</div>
-        </div>
-        <p class="prole"><b>Junior Frontend Developer</b></p>
-        <p class="ago">1d Ago &nbsp;&nbsp;&middot;&nbsp;&nbsp; Full Time &nbsp;&nbsp;&middot;&nbsp;&nbsp; USA Only</p>
-        <div class="hr"><hr></div>
-        <div class="container-jobs-tags">
-          <div class="tag2">
-            <p class="ptag">JavaScript</p>
-          </div>
-          <div class="tag2">
-            <p class="ptag">JavaScript</p>
-          </div>
-          <div class="tag2">
-            <p class="ptag">JavaScript</p>
-          </div>
-          <div class="tag2">
-            <p class="ptag">JavaScript</p>
-          </div>
-          <div class="tag2">
-            <p class="ptag">JavaScript</p>
-          </div>
-        </div>
-      </div>
+     
     </div>
     
   </div>
